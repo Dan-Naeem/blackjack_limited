@@ -1,0 +1,4 @@
+#DN
+#Blackjack LTD
+
+I first designed the game in python, as that was the language I was teaching myself at the time. I also chose this language 
