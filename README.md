@@ -7,6 +7,8 @@ There are two versions of the code, a .py file and a .ino file. Only the .ino fi
 
 The schematics explain how to setup the LCD display and how to wire a button for user input.
 
+Photos of the completed project available.
+
 
 ########
 
