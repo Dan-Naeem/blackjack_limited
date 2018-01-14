@@ -1,4 +1,12 @@
 #DN
 #Blackjack LTD
 
-I first designed the game in python, as that was the language I was teaching myself at the time. I also chose this language 
+I first designed the game in python, as that was the language I was teaching myself at the time. I also chose this language because of how easily and quickly a program can be designed, tested, and debugged. Once blackjack was fine-tuned in python, I moved onto rewriting it as a .ino file in the language of the elegy uno (Arduino uno).
+
+There were things that would have to be different in this version. For starters, the keyboard couldn't be used as the input. Following the instructions found on the Arduino website, I hardwired 2 buttons and set up various functions allowing the user to issue 2 possible commands when prompted for an input.
+
+The output also needed to be adjusted, as the info was to be displayed onto a LCD screen instead of a laptop screen. I set up the LCD display following an Arduino tutorial but felt that the built in functions weren't sufficient. I designed a couple of functions that allowed me manipulate the LCD screen more efficiently. 
+
+Once the hardware aspect of the code was tested, I went on the write the bulk of the program responsible for running the game. I stuck with the idea that the draw_card function should be separate but omitted the suit selector portion. This is because as I tested the program, I realized that the limited screen real estate was quickly filled up by the suits and would run into issues as the number of cards in a player hand increases. Since suits were only there to resemble the physical version of the game don't actually effect the value of the hand, I decided to comment them out. Feel free to put them back to see how they affect the game.
+
+Another issue that I ran into was with the RnG portion of the program. Python's random function was more sophisticated and as such I did not notice a repeating pattern. Arduino's built-in RnG, however, is more primitive. I realized that every time the system rebooted, the cycle repeated itself. What that means is that the RnG is only valid as long as the system stays on, plugged into a power source. 
